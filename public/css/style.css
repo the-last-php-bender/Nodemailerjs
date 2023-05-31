@@ -1,0 +1,35 @@
+*{
+   margin: 0;
+   box-sizing: border-box;
+   padding: 0;
+   font-family: "verdana";
+   background-color: #f4f4f4;
+}
+/* html,
+body{
+ 
+} */
+.form-container{
+    position:relative;
+    top:10px;
+    left:10px;
+    width:80%;
+    height:600px;
+}
+input,
+textarea{
+    width:100%;
+    margin-top: 2rem;
+    border:none;
+    border-bottom: 1px solid black;
+}
+.submit{
+    border: 1px solid black;
+    padding: 1rem;
+    text-align: center;
+    background-color: white;
+    cursor: pointer;
+}
+.submit:hover{
+    opacity: 0.6;
+}
