@@ -1,3 +1,4 @@
+require("dotenv").config();
 const express=require("express");
 const app=express();
 const nodemailer= require("nodemailer");
@@ -12,12 +13,12 @@ app.post('/',(req,res)=>{
     const transporter= nodemailer.createTransport({
        host:"smtp.gmail.com",
         auth:{
-            user:"nwinyinyadavid123@gmail.com",
-            pass:"shptzbeewflfjkjw"
+            user:process.env.GMAIL_NAME,
+            pass:process.env.APP_KEY
         }
     })
     const mailOptions = {
-        from:"nwinyinyadavid123@gmail.com",
+        from:process.env.GMAIL_NAME,
         to:req.body.email,
         subject:`Message for ${req.body.email}:  ${req.body.subject}`,
         text:req.body.message
